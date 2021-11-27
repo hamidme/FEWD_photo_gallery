@@ -525,7 +525,7 @@ function myInput() {
   let gallery = document.querySelector(".gallery");
 
   //select gallery children
-  let galleryAnchor = gallery.children;
+  let galleryChildren = gallery.children;
 
   //get search input character
   let getInput = document.querySelector("input");
@@ -533,13 +533,16 @@ function myInput() {
   //convert the input character to lower case
   let inputToLower = getInput.value.toLowerCase();
 
-  for (let i = 0; i < galleryAnchor.length; i++) {
-    let getDataCaption = galleryAnchor[i].getAttribute("data-caption");
-    let hideThumb = galleryAnchor[i].style;
+  //select all the gallery children
+  for (let i = 0; i < galleryChildren.length; i++) {
+    //get the data-caption attribute of a gallery child
+    let getDataCaption = galleryChildren[i].getAttribute("data-caption");
+
+    let selectThumb = galleryChildren[i].style;
     if (!getDataCaption.includes(inputToLower)) {
-      hideThumb.display = "none";
+      selectThumb.display = "none";
     } else {
-      hideThumb.display = "";
+      selectThumb.display = "";
     }
   }
 }
