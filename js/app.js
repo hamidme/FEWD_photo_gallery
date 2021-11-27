@@ -538,6 +538,7 @@ function myInput() {
     //get the data-caption attribute of a gallery child
     let getDataCaption = galleryChildren[i].getAttribute("data-caption");
 
+    //select thimbnail
     let selectThumb = galleryChildren[i].style;
     if (!getDataCaption.includes(inputToLower)) {
       selectThumb.display = "none";
