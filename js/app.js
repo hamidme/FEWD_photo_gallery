@@ -545,9 +545,3 @@ function myInput() {
 }
 
 document.addEventListener("keyup", myInput);
-
-//get attribute
-
-//check if the input matches an image's keyword (name)
-//if the input contains the keyword
-//  show the image
